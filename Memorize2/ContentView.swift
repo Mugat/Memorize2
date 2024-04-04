@@ -10,8 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         HStack {
+            CardView(isFaceUp: true)
             CardView()
-            CardView(isFaceUp: true )
             CardView()
             CardView()
             
@@ -19,6 +19,9 @@ struct ContentView: View {
         }
         .foregroundColor(.orange)
         .padding()
+        
+        
+        
     
         
     }
@@ -33,7 +36,8 @@ struct CardView: View {
                 RoundedRectangle(cornerRadius: 12)
                     .strokeBorder(Color.orange, lineWidth: 2)
                     .background(Color.white)
-                    .frame(width: (80), height: 120)
+                    .frame(width: 80, height: 120)
+                
                 
                 
                 Text(  "🐸" )
@@ -43,7 +47,7 @@ struct CardView: View {
                 
             } else {
                 RoundedRectangle(cornerRadius: 12)
-                    .foregroundColor(.red)
+                    .foregroundColor(.red )
             }
         }
     }
